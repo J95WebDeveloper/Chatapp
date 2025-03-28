@@ -33,7 +33,7 @@ function Message({ message }) {
       ) : (
         <div className="flex items-end justify-start">
           <div className="flex flex-col items-start">
-          <p className={`bg-[#383699] text-[14px] py-4 px-5 rounded-[8px_8px_8px_0px] max-w-[300px] md:max-w-[450px] break-words whitespace-normal ${shake}`}>
+          <p className={`bg-[#383699] text-[14px] py-4 px-5 rounded-[8px_8px_8px_0px] max-w-[250px] md:max-w-[450px] break-words whitespace-normal ${shake}`}>
               {message.message}
             </p>
             <p className="text-gray-600 text-xs mt-[2px]">
