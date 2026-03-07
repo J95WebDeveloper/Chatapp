@@ -6,6 +6,7 @@ import Register from "./pages/auth/Register";
 import Profile from "./pages/profile/Profile";
 import { useAuth } from "./context/AuthProvider";
 import { ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
