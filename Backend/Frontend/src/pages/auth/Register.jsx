@@ -58,7 +58,7 @@ function Register() {
               />
               <button
                 type="submit"
-                className="py-2.5 text-sm md:text-[16px] bg-darkBlue rounded-md font-medium active:scale-95 cursor-pointer"
+                className="py-2.5 text-[16px] bg-darkBlue rounded-md font-medium active:scale-95 cursor-pointer"
               >
                 Create
               </button>
