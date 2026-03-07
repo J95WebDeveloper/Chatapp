@@ -16,11 +16,14 @@ export const useUpdateProfile = () => {
               },
             });
             if (res.data.success) {
-              setAuthUser({
+              const updateUser = {
                 ...authUser,
                 profilePic: res.data.profilePic,
                 profileBio: res.data.profileBio,
-              });
+              };
+
+              setAuthUser(updateUser)
+              localStorage.setItem('chat-user', JSON.stringify(updateUser))
               setNewBio(res.data.profileBio);
               handleSuccess(res.data.message);
               setTimeout(() => {
