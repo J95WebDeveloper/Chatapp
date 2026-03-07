@@ -26,7 +26,7 @@ function Login() {
   };
 
   return (
-    <div className="h-[92vh] md:h-screen bg flex items-center justify-center">
+    <div className="min-h-dvh bg flex items-center justify-center">
       <div className="cart min-w-[320px] max-w-[450px] w-[80%] px-5 py-10 md:p-12 md:py-15 text-center">
             <h1 className="text-4xl font-semibold mb-12 lg:text-4xl">
               Welcome 
