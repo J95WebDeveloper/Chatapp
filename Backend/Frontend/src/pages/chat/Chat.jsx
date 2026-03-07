@@ -5,9 +5,9 @@ import MessageContainer from '../../components/MessageContainer'
 
 function Chat() {
   return (
-    <div className="h-[92vh] md:h-screen flex">
+    <div className="h-screen md:h-screen flex overflow-hidden">
         <Sidebar />
-        <MessageContainer />
+        <MessageContainer className="flex-1" />
     </div>
   );
 }
