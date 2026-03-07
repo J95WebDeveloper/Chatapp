@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const user = Cookies.get("jwt") || localStorage.getItem("chat-user");
-  const [authUser, setAuthUser] = useState(user ? JSON.parse(user) : undefined);
+  const [authUser, setAuthUser] = useState(user ? JSON.parse(user) : null);
 
   return (
     <AuthContext.Provider value={{ authUser, setAuthUser }}>
