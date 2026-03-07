@@ -24,9 +24,9 @@ function Register() {
   };
 
   return (
-    <div className="h-[92vh] md:h-screen bg flex items-center justify-center">
+    <div className="min-h-dvh bg flex items-center justify-center">
         <div className="cart min-w-[320px] max-w-[450px] w-[80%] px-5 py-10 md:p-12 md:py-15 text-center">
-            <h1 className="text-2xl md:text-3xl font-semibold mb-10 md:mb-12 lg:text-4xl">
+            <h1 className="text-2xl md:text-3xl font-semibold mb-8 lg:text-4xl">
               Create an Account
             </h1>
             <form
@@ -39,7 +39,7 @@ function Register() {
                 name="fullname"
                 onChange={handleChange}
                 placeholder="enter your name"
-                className="py-2 px-4 border-2 border-border rounded-md focus:outline-none"
+                className="py-2 px-4 border-2 border-border text-sm md:text-[16px] rounded-md focus:outline-none"
               />
 
               <input
@@ -47,18 +47,18 @@ function Register() {
                 name="email"
                 onChange={handleChange}
                 placeholder="enter your email"
-                className="py-2 px-4 border-2 border-border rounded-md focus:outline-none"
+                className="py-2 px-4 border-2 border-border text-sm md:text-[16px] rounded-md focus:outline-none"
               />
               <input
                 type="password"
                 name="password"
                 onChange={handleChange}
                 placeholder="enter your password"
-                className="py-2 px-4 rounded-md border-2 border-border focus:outline-none"
+                className="py-2 px-4 rounded-md border-2 text-sm md:text-[16px] border-border focus:outline-none"
               />
               <button
                 type="submit"
-                className="py-2.5 mt-2 bg-darkBlue rounded-md text-lg active:scale-95 cursor-pointer"
+                className="py-2.5 text-sm md:text-[16px] bg-darkBlue rounded-md font-medium active:scale-95 cursor-pointer"
               >
                 Create
               </button>
@@ -66,7 +66,7 @@ function Register() {
             <div>
               <span className="text-gray-300 text-sm md:text-[16px]">Already have an account?</span>{" "}
               <Link to={"/login"}>
-                <span className="text-blue font-semibold ml-3 md:text-[18px] cursor-pointer">
+                <span className="text-blue font-semibold ml-3 md:text-[17px] cursor-pointer">
                   Login
                 </span>
               </Link>
