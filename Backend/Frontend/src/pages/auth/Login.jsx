@@ -28,7 +28,7 @@ function Login() {
   return (
     <div className="min-h-dvh bg flex items-center justify-center">
       <div className="cart min-w-[320px] max-w-[450px] w-[80%] px-5 py-10 md:p-12 md:py-15 text-center">
-            <h1 className="text-4xl font-semibold mb-12 lg:text-4xl">
+            <h1 className="text-4xl font-semibold mb-8 lg:text-4xl">
               Welcome 
             </h1>
             <form
@@ -40,25 +40,25 @@ function Login() {
                 name="email"
                 onChange={handleChange}
                 placeholder="enter your email"
-                className="py-2 px-4 border-2 border-border rounded-md focus:outline-none"
+                className="py-2 px-4 border-2 border-border text-sm md:text-[16px] rounded-md focus:outline-none"
               />
               <input
                 type="password"
                 name="password"
                 onChange={handleChange}
                 placeholder="enter your password"
-                className="py-2 px-4 border-2 border-border rounded-md focus:outline-none"
+                className="py-2 px-4 border-2 border-border text-sm md:text-[16px] rounded-md focus:outline-none"
               />
               <button
                 type="submit"
-                className="py-2.5 mt-2 bg-darkBlue rounded-md text-lg active:scale-95 cursor-pointer">
+                className="py-2.5 font-medium bg-darkBlue text-sm md:text-[16px] rounded-md active:scale-95 cursor-pointer">
                 Login
               </button>
             </form>
             <div>
               <span className="text-gray-300 text-sm md:text-[16px]">Don't have an account?</span>{" "}
               <Link to={"/register"}>
-                <span className="text-blue font-semibold ml-3 md:text-[18px] cursor-pointer">
+                <span className="text-blue font-semibold ml-3 md:text-[17px] cursor-pointer">
                   Signup
                 </span>
               </Link>
