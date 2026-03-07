@@ -47,7 +47,7 @@ function Login() {
                 name="password"
                 onChange={handleChange}
                 placeholder="enter your password"
-                className="py-2 px-4 border-2 border-border text-sm md:text-[16px] rounded-md focus:outline-none"
+                className="py-2 px-4 border-2 border-border text-[16px] rounded-md focus:outline-none"
               />
               <button
                 type="submit"
