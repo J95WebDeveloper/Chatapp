@@ -18,7 +18,7 @@ function Sidebar() {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <div className="menu bg-[#080b2a] min-h-dvh w-72 lg:w-96 p-4">
+        <div className="menu bg-[#080b2a] h-full w-72 lg:w-96 p-4">
           <SideContent />
         </div>
       </div>
