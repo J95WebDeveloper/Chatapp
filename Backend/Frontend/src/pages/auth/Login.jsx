@@ -18,10 +18,14 @@ function Login() {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (Validation(values)) {
-      useLogin(values, setAuthUser, navigate);
+      await useLogin(values, setAuthUser, navigate);
+      setValues({
+        email: "",
+        password: "",
+      });
     }
   };
 
