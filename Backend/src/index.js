@@ -11,7 +11,6 @@ import path from "path";
 
 const __dirname = path.resolve();
 
-app.use("/uploads", express.static("uploads"));
 app.use(express.json());
 app.use(CookiParser());
 app.use(cors());
