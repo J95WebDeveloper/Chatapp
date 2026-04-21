@@ -5,6 +5,7 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [authUser, setAuthUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const token = Cookies.get("jwt");
@@ -13,17 +14,19 @@ export function AuthProvider({ children }) {
     if (token && user) {
       try {
         setAuthUser(JSON.parse(user));
-      } catch (err) {
+      } catch {
         localStorage.removeItem("chat-user");
         setAuthUser(null);
       }
     } else {
       setAuthUser(null);
     }
+
+    setLoading(false);
   }, []);
 
   return (
-    <AuthContext.Provider value={{ authUser, setAuthUser }}>
+    <AuthContext.Provider value={{ authUser, setAuthUser, loading }}>
       {children}
     </AuthContext.Provider>
   );
