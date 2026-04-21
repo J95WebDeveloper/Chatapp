@@ -10,11 +10,7 @@ export const useUpdateProfile = () => {
 
     const updateProfile = async(formData, navigate, setNewBio) => {
         try {
-            const res = await axios.post("/api/user/upload", formData, {
-              headers: {
-                "Content-Type": "multipart/form-data",
-              },
-            });
+            const res = await axios.post("/api/user/upload", formData);
             if (res.data.success) {
               const updateUser = {
                 ...authUser,
