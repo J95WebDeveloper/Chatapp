@@ -20,38 +20,31 @@ const updateUser = async (req, res) => {
   try {
     const { profileBio } = req.body;
 
-    let profileUrl = null;
-
+    let profilePic;
     if (req.file) {
-      profileUrl = req.file.filename;
-    }
-
-    const updateData = {
-      profileBio,
-    };
-
-    if (profileUrl) {
-      updateData.profilePic = profileUrl;
+      profilePic = req.file.path;
     }
 
     const user = await User.findByIdAndUpdate(
       req.user._id,
-      updateData,
-      { new: true }
+      { profilePic: profilePic, profileBio },
+      { new: true },
     );
 
     res.status(201).json({
       success: true,
-      message: "Profile updated successfully",
+      message: "Profile update Successfully",
       profilePic: user.profilePic,
       profileBio: user.profileBio,
     });
   } catch (error) {
-    res.status(500).json({
-      message: "Upload image internal error",
+    return res.status(501).json({
+      message: "Update Internal server error",
       error: error.message,
+      success: false,
     });
   }
 };
+
 
 export default { getUser, updateUser };
