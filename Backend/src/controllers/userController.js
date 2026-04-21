@@ -20,7 +20,7 @@ const updateUser = async (req, res) => {
   try {
     const { profilePic, profileBio } = req.body;
 
-    const profileUrl = `http://localhost:3000/uploads/${req.file.filename}`;
+    const profileUrl = `${req.file.filename}`;
     const user = await User.findByIdAndUpdate(
       req.user._id,
       { profilePic: profileUrl, profileBio },
