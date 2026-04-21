@@ -48,7 +48,7 @@ function Profile() {
     <div className="min-h-dvh bg flex items-center justify-center">
       <div className="lg:w-[800px] md:w-[400px] w-[320px] cart py-10 md:p-10">
         <h1 className="md:hidden text-center text-4xl mb-10"> Profile </h1>
-        <h1 className="hidden md:block text-center lg:text-4xl mb-18">
+        <h1 className="hidden md:block text-center text-2xl lg:text-4xl mb-18">
           Update your Profile
         </h1>
         <div className="flex items-center justify-center md:justify-evenly md:gap-10">
@@ -90,13 +90,13 @@ function Profile() {
               ></textarea>
               <div className="flex justify-evenly gap-5 mt-2">
                 <Link to={"/"}>
-                  <button className="px-4 py-3 cursor-pointer hover:scale-105 rounded-md bg-[#bb4b17] text-white active:scale-95 w-[130px]">
+                  <button className="px-4 py-3 cursor-pointer hover:scale-105 rounded-md bg-[#bb4b17] text-white w-[130px]">
                     Cancle
                   </button>
                 </Link>
                 <button
                   type="submit"
-                  className="px-4 py-3 flex gap-2 cursor-pointer hover:scale-105 rounded-md bg-darkBlue active:scale-95 w-[130px] md:w-full"
+                  className="px-4 py-3 flex gap-2 cursor-pointer hover:scale-105 rounded-md bg-darkBlue w-[130px] md:w-full"
                 >
                   <span className="text-center w-full">Save</span>{" "}
                   <span className="hidden md:block">Changes</span>
