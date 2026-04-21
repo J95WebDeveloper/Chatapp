@@ -16,10 +16,15 @@ function Register() {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (Validation(values)) {
-      useRegister(values, navigate);
+      await useRegister(values, navigate);
+      setValues({
+        fullname: "",
+        email: "",
+        password: "",
+      });
     }
   };
 
