@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import { useAuth } from "../../context/AuthProvider";
 import { useUpdateProfile } from "../../hooks/useUpdateProfile";
+import axios from "axios";
 
 function Profile() {
   const { authUser, setAuthUser } = useAuth();
@@ -27,7 +28,6 @@ function Profile() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
-    console.log(file);
     if (file) {
       setImagePreview(URL.createObjectURL(file));
       setProfilePic(file);
@@ -41,17 +41,17 @@ function Profile() {
     formData.append("profile-image", profilePic);
     formData.append("profileBio", newBio);
 
-    updateProfile(formData, navigate, setNewBio);
+    updateProfile(formData, navigate, setNewBio)
   };
 
   return (
     <div className="min-h-dvh bg flex items-center justify-center">
-      <div className="lg:w-[800px] md:w-[400px] w-[310px] cart py-10 md:p-10">
+      <div className="lg:w-[800px] md:w-[400px] w-[300px] cart py-10 md:p-10">
         <h1 className="md:hidden text-center text-4xl mb-10"> Profile </h1>
         <h1 className="hidden md:block text-center text-2xl lg:text-4xl mb-18">
           Update your Profile
         </h1>
-        <div className="flex items-center justify-center md:justify-evenly md:gap-10">
+        <div className="flex items-center justify-center md:justify-evenly md:gap-10 w-full">
           <form
             onSubmit={handleSubmit}
             className="flex flex-col items-center justify-center md:gap-3"
@@ -59,7 +59,7 @@ function Profile() {
           >
             <div
               onClick={handleFileInputClick}
-              className="flex items-center justify-center mb-4"
+              className="flex items-center justify-center mb-5"
             >
               <img
                 src={imagePreview || authUser.profilePic || avatar}
@@ -74,7 +74,7 @@ function Profile() {
                 hidden
               />
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 w-[260px]">
               <input
                 type="text"
                 value={authUser.fullname}
@@ -88,17 +88,16 @@ function Profile() {
                 onChange={(e) => setNewBio(e.target.value)}
                 className="border-2 border-border px-4 py-2 rounded-md"
               ></textarea>
-              <div className="flex justify-evenly gap-5 mt-2">
+              <div className="flex justify-evenly gap-5 mt-1">
                 <Link to={"/"}>
-                  <button className="px-4 py-3 cursor-pointer hover:scale-105 rounded-md bg-[#bb4b17] text-white w-[130px]">
+                  <button className="py-2 md:px-4 md:py-3 cursor-pointer hover:scale-105 rounded-md bg-[#bb4b17] text-white w-[130px]">
                     Cancle
                   </button>
                 </Link>
                 <button
                   type="submit"
-                  className="px-4 py-3 flex gap-2 cursor-pointer hover:scale-105 rounded-md bg-darkBlue w-[130px] md:w-full"
-                >
-                  <span className="text-center w-full">Save</span>{" "}
+                  className="py-2 md:px-4 md:py-3 items-center flex gap-2 cursor-pointer hover:scale-105 rounded-md bg-darkBlue w-[130px] md:w-full">
+                  <span className="text-center w-full">Save</span>
                   <span className="hidden md:block">Changes</span>
                 </button>
               </div>
