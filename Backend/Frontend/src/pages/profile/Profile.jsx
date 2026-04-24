@@ -46,7 +46,7 @@ function Profile() {
 
   return (
     <div className="min-h-dvh bg flex items-center justify-center">
-      <div className="lg:w-[800px] md:w-[400px] w-[320px] cart py-10 md:p-10">
+      <div className="lg:w-[800px] md:w-[400px] w-[310px] cart py-10 md:p-10">
         <h1 className="md:hidden text-center text-4xl mb-10"> Profile </h1>
         <h1 className="hidden md:block text-center text-2xl lg:text-4xl mb-18">
           Update your Profile
