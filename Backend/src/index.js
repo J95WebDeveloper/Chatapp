@@ -27,6 +27,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.join(__dirname, "./Frontend/dist", "index.html"));
   });
 }
+
+app.get("/ping", (req, res) => {
+  res.send("OK");
+});
+
 server.listen(PORT, () => {
   console.log(`Server is connected... ${PORT}`);
   connectDB();
